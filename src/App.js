@@ -1,38 +1,9 @@
-import React, { useState } from "react";
-import './App.css';
-import Footer from './components/Footer';
-import Introduction from './components/Introduction';
-import MyButton from './components/MyButton';
-import Navbar from './components/Navbar';
+import React from 'react';
 
-const App = () => {
-	const name = 'Candra';
-	const name2 = 'Gulo';
-
-	const clicked = () => {
-		return (
-			alert('Button dipencet')
-		)
-	}
-
-	const paragraf = () => {
-		return <i>mantap bang</i>;	
-	}
-
-	const [getNavbarValue, setNavbarValue] = useState("");
-	const changeNavbarValue = () => {
-		setNavbarValue("Website Candra");
-	};
-
-
+function App() {
 	return (
-		<div className="App-header">
-			<Navbar navValue={getNavbarValue} />
-			<Introduction name={name} />
-			<MyButton clicked={clicked} />
-			<Introduction name={name2} />
-			<button onClick={() => changeNavbarValue()}>Ubah Navbar</button>
-			<Footer paragraf={paragraf}/>
+		<div>
+			<h2>Hello, Dunia!</h2>
 		</div>
 	);
 };
